@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 function ScrollDownArrow() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center m-4">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

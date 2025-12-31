@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
-// import BackgroundParticles from "@/components/BackgroundParticles";
+import BackgroundParticles from "@/components/BackgroundParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto  bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto  bg-background/50 text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -37,9 +37,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* BACKGROUND */}
-          {/* <div className="relative">
+          <div className="relative">
             <BackgroundParticles />
-          </div> */}
+          </div>
 
           {/* CONTENT */}
           <header className="z-10">
