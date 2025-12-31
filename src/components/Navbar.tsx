@@ -1,10 +1,11 @@
 import { navItems } from "@/lib/contants";
 import { Menu, UserCircle } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 function Navbar() {
   return (
-    <nav className="mt-4 mx-2 bg-background/80 backdrop-blur-md rounded-full">
+    <nav className="mt-4 mx-2 rounded-full bg-accent/20 backdrop-blur-xs">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* MOBILE MENU */}
@@ -16,7 +17,7 @@ function Navbar() {
 
           {/* LOGO */}
           <div className="shrink-0">
-            <h1 className="text-xl font-bold text-foreground">فرانت وب</h1>
+            <h1 className="text-xl font-bold text-foreground pb-1">فرانت وب</h1>
           </div>
 
           {/* DESKTOP LINKS */}
@@ -40,9 +41,11 @@ function Navbar() {
           </div>
 
           {/* DESKTOP CTA */}
-          <div className="hidden md:flex">
-            <Link href={"#"}>ثبت درخواست</Link>
-          </div>
+          <Link className="hidden md:flex" href={"#"}>
+            <Button className="rounded-full">
+              <span className="pb-1">ثبت درخواست</span>
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

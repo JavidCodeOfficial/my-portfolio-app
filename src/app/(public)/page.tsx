@@ -5,7 +5,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 
 function PublicPage() {
   return (
-    <div className="bg-background px-4 sm:px-6 lg:px-16">
+    <div className="px-4 sm:px-6 lg:px-16">
       <HeroSection />
       <ScrollDownArrow />
       <SkillsSection />

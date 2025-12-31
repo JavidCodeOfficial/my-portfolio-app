@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import BackgroundParticles from "@/components/BackgroundParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,19 +26,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto  bg-background/50 text-foreground`}
       >
-        <header>
-          <Navbar />
-        </header>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* BACKGROUND */}
+          <div className="relative">
+            <BackgroundParticles />
+          </div>
 
-        <main>{children}</main>
+          {/* CONTENT */}
+          <header className="z-10">
+            <Navbar />
+          </header>
 
-        <footer className="py-10 text-center text-sm text-muted-foreground">
-          © 2025
-        </footer>
+          <main>{children}</main>
+
+          <footer className="z-10 py-10 text-center text-sm text-muted-foreground backdrop-blur-xs">
+            © 2025
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader } from "./ui/card";
 
 type Project = {
   title: string;
@@ -20,23 +23,26 @@ function ProjectCard({
   href,
 }: Project) {
   return (
-    <div className="group border border-border/50 rounded-xl overflow-hidden transition-shadow hover:shadow-lg">
+    <Card className="group border border-border/50 rounded-xl overflow-hidden transition-shadow hover:shadow-lg p-0">
       {/* Screenshot */}
-      <div className="relative aspect-16/10 overflow-hidden">
+      <CardHeader className="relative aspect-16/10 overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      </div>
+      </CardHeader>
 
       {/* Content */}
-      <div className="p-6 flex flex-col justify-between h-full">
+      <CardContent className="p-6 flex flex-col justify-between h-full">
         <div>
-          <span className=" text-xs uppercase tracking-wide text-muted-foreground backdrop-blur-xs">
+          <Badge
+            variant={"secondary"}
+            className="text-xs uppercase tracking-wide text-foreground backdrop-blur-xs"
+          >
             {category}
-          </span>
+          </Badge>
 
           <h3 className="text-lg font-semibold mt-2 mb-3">{title}</h3>
 
@@ -50,16 +56,15 @@ function ProjectCard({
             {tech.join(" · ")}
           </span>
 
-          <Link
-            href={href}
-            className="text-sm font-medium inline-flex items-center gap-1 group/link"
-          >
-            مشاهده جزئیات
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover/link:-translate-x-1" />
+          <Link href={href}>
+            <Button className="text-sm font-medium inline-flex items-center gap-1 group/link">
+              <span className="pb-1"> مشاهده جزئیات</span>
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover/link:-translate-x-1" />
+            </Button>
           </Link>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
 
