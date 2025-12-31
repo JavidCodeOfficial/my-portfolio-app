@@ -5,8 +5,8 @@ import { Button } from "./ui/button";
 
 function Navbar() {
   return (
-    <nav className="mt-4 mx-2 rounded-full bg-accent/20 backdrop-blur-xs">
-      <div className="max-w-6xl mx-auto px-4">
+    <nav className="max-w-6xl mx-auto mt-4">
+      <div className="bg-accent/20 rounded-full backdrop-blur-xs mx-2 px-4">
         <div className="flex items-center justify-between h-16">
           {/* MOBILE MENU */}
           <div className="flex md:hidden">

@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import ScrollDownArrow from "@/components/ScrollDownArrow";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import BlogSection from "@/components/sections/BlogSection";
 
 function PublicPage() {
   return (
@@ -10,6 +11,7 @@ function PublicPage() {
       <ScrollDownArrow />
       <SkillsSection />
       <ProjectsSection />
+      <BlogSection />
     </div>
   );
 }

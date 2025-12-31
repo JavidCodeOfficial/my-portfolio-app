@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto  bg-background/50 text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-background/50 text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -46,9 +46,9 @@ export default function RootLayout({
             <Navbar />
           </header>
 
-          <main>{children}</main>
+          <main className="max-w-7xl mx-auto">{children}</main>
 
-          <footer className="z-10 py-10 text-center text-sm text-muted-foreground backdrop-blur-xs">
+          <footer className="z-10 py-10 text-center text-sm text-muted-foreground backdrop-blur-xs bg-accent/20">
             © 2025
           </footer>
         </ThemeProvider>

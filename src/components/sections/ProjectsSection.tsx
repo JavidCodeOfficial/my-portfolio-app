@@ -6,7 +6,7 @@ import ElectricBorder from "../ElectricBorder";
 import { motion } from "motion/react";
 function ProjectsSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center overflow-hidden rounded-4xl">
+    <section className="min-h-screen flex items-center justify-center">
       <div className="px-4 sm:px-6 lg:px-16 py-16 space-y-16">
         {/* Header */}
         <div className="flex items-center justify-center">
@@ -38,6 +38,7 @@ function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="p-[3px] overflow-hidden rounded-xl"
             >
               <ElectricBorder
                 color="#7df9ff"
