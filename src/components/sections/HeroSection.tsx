@@ -9,7 +9,7 @@ import Magnet from "../Magnet";
 function HeroSection() {
   return (
     <section className="min-h-[80vh] flex justify-center items-center overflow-hidden px-4 sm:px-6 lg:px-8">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
         {/* Right Content */}
         <motion.div
           initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
@@ -18,7 +18,7 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
           className="flex items-center justify-center"
         >
-          <div className="relative w-[280px] h-[280px] md:w-[420px] md:h-[420px]">
+          <div className="relative w-[200px] h-[200px] md:w-[420px] md:h-[420px]">
             <Orb
               hoverIntensity={0.5}
               rotateOnHover={true}
