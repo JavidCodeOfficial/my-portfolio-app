@@ -4,20 +4,18 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { blogPosts } from "@/lib/contants";
+import { fadeUp } from "@/lib/animations";
 
 export default function BlogSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center">
+    <section
+      id="blog"
+      className="min-h-screen flex items-center justify-center"
+    >
       <div className="px-4 sm:px-6 lg:px-16 py-16 space-y-16">
         {/* Header */}
         <div className="flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl text-center"
-          >
+          <motion.div {...fadeUp()} className="max-w-2xl text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight font-bold mb-6">
               نوشته‌ها
             </h1>
@@ -31,13 +29,7 @@ export default function BlogSection() {
         {/* Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <motion.div key={post.id} {...fadeUp({ delay: index * 0.1 })}>
               <Link href={`/blog/${post.id}`} className="block h-full">
                 <Card
                   className="

@@ -1,9 +1,9 @@
 export const navItems = [
   { name: "صفحه اصلی", href: "/" },
-  { name: "مهارت ها", href: "/#" },
-  { name: "نمونه کار ها", href: "/#" },
-  { name: "بلاگ", href: "/#" },
-  { name: "تماس", href: "/#" },
+  { name: "مهارت ها", href: "#skills" },
+  { name: "نمونه کار ها", href: "#projects" },
+  { name: "بلاگ", href: "#blog" },
+  { name: "تماس", href: "#contact" },
 ];
 
 export const skills = [

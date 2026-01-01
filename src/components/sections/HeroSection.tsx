@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import Orb from "../Orb";
 import Magnet from "../Magnet";
+import { fadeUp } from "@/lib/animations";
 
 function HeroSection() {
   return (
@@ -13,10 +14,7 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Right Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            {...fadeUp()}
             className="flex items-center justify-center"
           >
             <div className="relative w-[200px] h-[200px] md:w-[420px] md:h-[420px]">
@@ -32,12 +30,7 @@ function HeroSection() {
           {/* Left Content */}
           <div className="max-w-2xl">
             <div className="">
-              <motion.div
-                initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 0.8 }}
-                className="text-center"
-              >
+              <motion.div {...fadeUp()} className="text-center">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
                   طراحی و توسعه وب‌سایت‌های{" "}
                   <span className="text-primary">حرفه ای و جذاب</span>
@@ -49,11 +42,7 @@ function HeroSection() {
                   ساخته می شود.
                 </p>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
+                <motion.div {...fadeUp({ delay: 0.2 })}>
                   <Magnet padding={50} disabled={false} magnetStrength={2}>
                     <Button
                       className="group inline-flex items-center gap-2 text-sm font-medium"
