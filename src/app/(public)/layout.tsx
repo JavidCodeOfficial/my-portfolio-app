@@ -46,6 +46,9 @@ export default function RootLayout({
             <Navbar />
           </header>
 
+          {/* Spacer */}
+          <div className="h-20" />
+
           <main className="max-w-7xl mx-auto">{children}</main>
 
           <footer className="z-10 py-10 text-center text-sm text-muted-foreground backdrop-blur-xs bg-accent/20">
