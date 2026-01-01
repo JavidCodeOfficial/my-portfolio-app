@@ -1,11 +1,12 @@
 "use client";
 
 import { navItems } from "@/lib/contants";
-import { Menu, UserCircle } from "lucide-react";
+import { UserCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import { useScrolled } from "@/hooks/useScrolled";
+import MobileSheet from "./MobileSheet";
 
 function Navbar() {
   const scrolled = useScrolled(10);
@@ -27,9 +28,7 @@ function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* MOBILE MENU */}
             <div className="flex md:hidden">
-              <button title="menu" type="button">
-                <Menu />
-              </button>
+              <MobileSheet />
             </div>
 
             {/* LOGO */}
