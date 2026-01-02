@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import Orb from "../Orb";
 import Magnet from "../Magnet";
 import { fadeUp } from "@/lib/animations";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -44,13 +45,15 @@ function HeroSection() {
 
                 <motion.div {...fadeUp({ delay: 0.2 })}>
                   <Magnet padding={50} disabled={false} magnetStrength={2}>
-                    <Button
-                      className="group inline-flex items-center gap-2 text-sm font-medium"
-                      size="lg"
-                    >
-                      <span className="pb-1">مشاهده نمونه‌کارها</span>
-                      <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                    </Button>
+                    <Link href={"#projects"}>
+                      <Button
+                        className="group inline-flex items-center gap-2 text-sm font-medium"
+                        size="lg"
+                      >
+                        <span className="pb-1">مشاهده نمونه‌کارها</span>
+                        <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+                      </Button>
+                    </Link>
                   </Magnet>
                 </motion.div>
               </motion.div>
