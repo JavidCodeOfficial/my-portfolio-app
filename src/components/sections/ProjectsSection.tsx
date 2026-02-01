@@ -9,7 +9,7 @@ function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center"
+      className="min-h-[60vh] flex items-center justify-center"
     >
       <div className="px-4 sm:px-6 lg:px-16 py-16 space-y-16">
         {/* Header */}

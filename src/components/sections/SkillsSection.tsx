@@ -7,7 +7,7 @@ function SkillsSection() {
   return (
     <section
       id="skills"
-      className="min-h-screen flex justify-center items-center overflow-hidden"
+      className="min-h-[60vh] flex justify-center items-center overflow-hidden"
     >
       <div className="px-4 sm:px-6 lg:px-16 py-16 space-y-16">
         {/* Header */}

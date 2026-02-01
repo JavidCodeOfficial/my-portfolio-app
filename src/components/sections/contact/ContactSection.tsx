@@ -8,7 +8,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-24 flex justify-center items-center overflow-hidden"
+      className="min-h-[60vh] py-24 flex justify-center items-center overflow-hidden"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Heading */}

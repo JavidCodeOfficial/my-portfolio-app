@@ -10,7 +10,7 @@ import Link from "next/link";
 
 function HeroSection() {
   return (
-    <section className="min-h-[70vh] lg:min-h-[80vh] flex justify-center items-center overflow-hidden">
+    <section className="min-h-[60vh] flex justify-center items-center overflow-hidden">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Right Content */}
