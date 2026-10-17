@@ -60,7 +60,7 @@ function Navbar() {
 
             {/* DESKTOP CTA */}
             <Link className="hidden md:flex" href={"#"}>
-              <Button className="rounded-full">
+              <Button className="rounded-full cursor-pointer">
                 <span className="pb-1">ثبت درخواست</span>
               </Button>
             </Link>
